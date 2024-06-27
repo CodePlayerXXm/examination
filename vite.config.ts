@@ -24,6 +24,15 @@ export default defineConfig({
     },
   },
 
+  server: {
+    proxy: {
+      '/api/': {
+        target: 'http://123.234.7.127:8888',
+        changeOrigin: true,
+      },
+    },
+  },
+
   plugins: [
     VueMacros({
       plugins: {
