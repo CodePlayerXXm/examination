@@ -1,20 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es2016",
     "jsx": "preserve",
     "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "paths": {
       "~/*": ["src/*"]
     },
     "resolveJsonModule": true,
     "types": [
-      "vitest",
       "vite/client",
-      "vite-plugin-vue-layouts/client",
-      "vite-plugin-pwa/client",
       "unplugin-vue-macros/macros-global",
       "unplugin-vue-router/client"
     ],
@@ -22,17 +19,13 @@
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
-    "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
     "skipLibCheck": true
   },
-  "vueCompilerOptions": {
-    "plugins": [
-      "@vue-macros/volar/define-models",
-      "@vue-macros/volar/define-slots"
-    ]
-  },
-  "exclude": ["dist", "node_modules", "cypress"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "eslint.config.js"
+  ]
 }
